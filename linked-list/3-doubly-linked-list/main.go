@@ -13,7 +13,7 @@ func main() {
 	linkedList.AddTail("2")
 	linkedList.AddTail("3")
 
-	linkedList.DeleteFirstOcurrency("2")
+	linkedList.DeleteFirstOcurrency("3")
 
 	fmt.Println(linkedList.GetNodesData())
 	fmt.Println(linkedList.GetHead().GetData())

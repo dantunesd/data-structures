@@ -54,6 +54,12 @@ func (l *LinkedList) DeleteFirstOcurrency(data string) {
 		return
 	}
 
+	if l.GetTail().GetData() == data {
+		l.updateTail(l.GetTail().GetPrevious())
+		l.GetTail().SetNext(nil)
+		return
+	}
+
 	currentNode := l.GetHead().GetNext()
 
 	for currentNode != nil {
@@ -63,9 +69,6 @@ func (l *LinkedList) DeleteFirstOcurrency(data string) {
 		}
 
 		currentNode.GetPrevious().SetNext(currentNode.GetNext())
-		if currentNode.GetPrevious().GetNext() == nil {
-			l.updateTail(currentNode.GetPrevious())
-		}
 		break
 	}
 }
