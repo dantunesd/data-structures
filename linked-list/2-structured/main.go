@@ -20,6 +20,7 @@ func main() {
 
 	linkedList.DeleteFirstOcurrency("3")
 	linkedList.DeleteFirstOcurrency("5")
+	linkedList.DeleteFirstOcurrency("6")
 
 	fmt.Println(linkedList.GetNodesData())
 	fmt.Println(linkedList.GetHead().GetData())
