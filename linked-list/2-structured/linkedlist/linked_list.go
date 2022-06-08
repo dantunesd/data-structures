@@ -50,8 +50,8 @@ func (l *LinkedList) DeleteFirstOcurrency(data string) {
 		return
 	}
 
-	currentNode := l.GetHead().GetNext()
 	previousNode := l.GetHead()
+	currentNode := l.GetHead().GetNext()
 
 	for currentNode != nil && currentNode.GetData() != data {
 		previousNode = currentNode
