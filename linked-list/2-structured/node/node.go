@@ -15,7 +15,6 @@ func (n *Node) GetData() string {
 }
 
 // Big O(1) - constant time - there is no increase of operation time
-
 func (n *Node) GetNext() *Node {
 	return n.next
 }
