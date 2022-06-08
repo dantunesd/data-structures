@@ -1,6 +1,6 @@
 package linkedlist
 
-import "data-structures-algorithms/linked-list/2-structured/node"
+import "data-structures-algorithms/linked-list/2-singly-linked-list/node"
 
 type LinkedList struct {
 	head *node.Node

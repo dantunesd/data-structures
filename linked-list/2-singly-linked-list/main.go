@@ -1,8 +1,8 @@
 package main
 
 import (
-	"data-structures-algorithms/linked-list/2-structured/linkedlist"
-	"data-structures-algorithms/linked-list/2-structured/node"
+	"data-structures-algorithms/linked-list/2-singly-linked-list/linkedlist"
+	"data-structures-algorithms/linked-list/2-singly-linked-list/node"
 	"fmt"
 )
 
