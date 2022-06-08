@@ -43,6 +43,29 @@ func (l *LinkedList) AddTail(data string) {
 }
 
 // Big O(n) - linear time - time increases linearly accordingly on how many items is linked
+// In the worst case, the item we want to delete may be the last item so we have to iterate over all items linked.
+func (l *LinkedList) DeleteFirstOcurrency(data string) {
+	if l.GetHead().GetData() == data {
+		l.updateHead(l.GetHead().GetNext())
+		return
+	}
+
+	currentNode := l.GetHead()
+	previousNode := l.GetHead()
+
+	for currentNode != nil && currentNode.GetData() != data {
+		previousNode = currentNode
+		currentNode = currentNode.GetNext()
+	}
+
+	previousNode.SetNext(currentNode.GetNext())
+
+	if previousNode.GetNext() == nil {
+		l.updateTail(previousNode)
+	}
+}
+
+// Big O(n) - linear time - time increases linearly accordingly on how many items is linked
 func (l *LinkedList) GetNodesData() []string {
 	var nodesData []string
 

@@ -18,6 +18,10 @@ func main() {
 	linkedList.AddTail("4")
 	linkedList.AddTail("5")
 
+	linkedList.DeleteFirstOcurrency("2")
+	linkedList.DeleteFirstOcurrency("3")
+	linkedList.DeleteFirstOcurrency("5")
+
 	fmt.Println(linkedList.GetNodesData())
 	fmt.Println(linkedList.GetHead().GetData())
 	fmt.Println(linkedList.GetTail().GetData())
