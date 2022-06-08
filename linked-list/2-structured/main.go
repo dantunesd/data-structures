@@ -18,7 +18,6 @@ func main() {
 	linkedList.AddTail("4")
 	linkedList.AddTail("5")
 
-	linkedList.DeleteFirstOcurrency("2")
 	linkedList.DeleteFirstOcurrency("3")
 	linkedList.DeleteFirstOcurrency("5")
 
