@@ -8,14 +8,14 @@ type Node struct {
 }
 
 func main() {
-	node := &Node{Name: "2"}
+	next := &Node{Name: "2"}
+	head := &Node{Name: "1", Next: next}
 
-	InsertAfter(node, "3")
-	Push(&node, "1")
-	Append(node, "4")
-	Append(node, "5")
+	InsertAfter(head, "1.5")
+	Push(&head, "0")
+	Append(head, "3")
 
-	PrintNodes(node)
+	PrintNodes(head)
 
 }
 
