@@ -73,6 +73,28 @@ func (l *LinkedList) DeleteFirstOcurrency(data string) {
 	}
 }
 
+// Big O(n) - linear time - time increases linearly accordingly on how many items is linked, because we have to traverse the whole list
+func (l *LinkedList) Reverse() {
+	currentNode := l.GetHead()
+
+	for currentNode != nil {
+		next := currentNode.GetNext()
+		previous := currentNode.GetPrevious()
+
+		currentNode.SetPrevious(next)
+		currentNode.SetNext(previous)
+
+		currentNode = currentNode.GetPrevious()
+	}
+
+	currentTail := l.GetTail()
+	currentHead := l.GetHead()
+
+	l.updateHead(currentTail)
+	l.updateTail(currentHead)
+
+}
+
 // Big O(n) - linear time - time increases linearly accordingly on how many items is linked
 func (l *LinkedList) GetNodesData() []string {
 	var nodesData []string

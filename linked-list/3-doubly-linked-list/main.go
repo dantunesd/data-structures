@@ -18,4 +18,9 @@ func main() {
 	fmt.Println(linkedList.GetNodesData())
 	fmt.Println(linkedList.GetHead().GetData())
 	fmt.Println(linkedList.GetTail().GetData())
+
+	linkedList.Reverse()
+	fmt.Println(linkedList.GetNodesData())
+	fmt.Println(linkedList.GetHead().GetData())
+	fmt.Println(linkedList.GetTail().GetData())
 }
