@@ -1,28 +1,18 @@
 package node
 
 type Node struct {
-	data     string
+	data     int
 	previous *Node
 	next     *Node
 }
 
-func NewNode(data string) *Node {
+func NewNode(data int) *Node {
 	return &Node{data: data}
 }
 
 // Big O(1) - constant time - there is no increase of operation time
-func (n *Node) GetData() string {
+func (n *Node) GetData() int {
 	return n.data
-}
-
-// Big O(1) - constant time - there is no increase of operation time
-func (n *Node) GetNext() *Node {
-	return n.next
-}
-
-// Big O(1) - constant time - there is no increase of operation time, no matter the input
-func (n *Node) SetNext(next *Node) {
-	n.next = next
 }
 
 // Big O(1) - constant time - there is no increase of operation time
@@ -33,4 +23,14 @@ func (n *Node) GetPrevious() *Node {
 // Big O(1) - constant time - there is no increase of operation time, no matter the input
 func (n *Node) SetPrevious(previous *Node) {
 	n.previous = previous
+}
+
+// Big O(1) - constant time - there is no increase of operation time
+func (n *Node) GetNext() *Node {
+	return n.next
+}
+
+// Big O(1) - constant time - there is no increase of operation time, no matter the input
+func (n *Node) SetNext(next *Node) {
+	n.next = next
 }
