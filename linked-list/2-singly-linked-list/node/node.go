@@ -1,16 +1,16 @@
 package node
 
 type Node struct {
-	data string
+	data int
 	next *Node
 }
 
-func NewNode(data string) *Node {
+func NewNode(data int) *Node {
 	return &Node{data: data}
 }
 
 // Big O(1) - constant time - there is no increase of operation time
-func (n *Node) GetData() string {
+func (n *Node) GetData() int {
 	return n.data
 }
 
